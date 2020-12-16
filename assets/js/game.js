@@ -1,6 +1,6 @@
 //Declare functions
-var fight = function() {
-    window.alert("Welcome to Robot Gladiators!  " + enemyName +" has entered the ring!" );
+var fight = function(enemyName) {
+    window.confirm("Welcome to Robot Gladiators!  " + enemyName +" has entered the ring! Do you want to fight him? (It will cist you $10.) Ok for yes, cancel for no" );
     
     enemyHealth = enemyHealth - playerAttack;
     console.log(enemyName + " took " + playerAttack + " points of damage! " + enemyName + " has " + enemyHealth + " health left.");
@@ -23,12 +23,16 @@ var fight = function() {
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
+var playerMoney = 10;
 
-//You can also log multiple values at once, like this:
-console.log(playerName, playerAttack. playerHealth);
 
-var enemyName = "Roborto"
+
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+for (i=0; i<enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
 
-fight();
+
+//fight();
